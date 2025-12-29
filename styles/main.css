@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    text-shadow: 0 0 15px #00aaff;
+}
+
+a {
+    transition: 0.3s ease;
+}
+
+header {
+    background: #111;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0 20px #0099ff50;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav a {
+    color: #00aaff;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ccff;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    width: 40px;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.burger div {
+    height: 4px;
+    background: #00aaff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    padding: 20px;
+    gap: 15px;
+}
+
+.mobile-menu a {
+    color: #00aaff;
+    font-size: 20px;
+}
+
+.show {
+    display: flex !important;
+}
+
+.hero {
+    height: 65vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+.hero-content {
+    z-index: 10;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.glow-block {
+    padding: 30px;
+    margin-bottom: 30px;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0088ff80;
+    transition: 0.3s;
+}
+
+.glow-block:hover {
+    box-shadow: 0 0 35px #00ccff;
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background: #111;
+    box-shadow: 0 0 15px #0088ff40;
+}
+
+@media (max-width: 768px) {
+    .nav { display: none; }
+    .burger { display: flex; margin: auto; }
+
+    .hero {
+        height: 45vh;
+    }
+}
+
+
+
+.burger.open div:nth-child(1) {
+    transform: rotate(45deg) translateY(10px);
+}
+
+.burger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+.tech-types {
+    padding: 50px;
+    text-align: center;
+}
+
+.tech-types h2 {
+    color: #00c8ff;
+    text-shadow: 0 0 12px #00aaff;
+    margin-bottom: 40px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.tech-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #0088ff40;
+    transition: 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 35px #00ccff;
+}
+
+.tech-card img {
+    width: 100px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px #00ccff);
+}
+
+.tech-card h3 {
+    color: #00aaff;
+    text-shadow: 0 0 10px #0088ff;
+}
+
+.tech-card p {
+    font-size: 0.95rem;
+    color: #cfcfcf;
+}
+
+
+@media (max-width: 1024px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+.applications {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.applications h2 {
+    color: #00c8ff;
+    text-shadow: 0 0 12px #00aaff;
+    margin-bottom: 40px;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.app-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #0088ff40;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.app-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 35px #00ccff;
+}
+
+.app-card img {
+    width: 70px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px #00ccff);
+}
+
+.app-card h3 {
+    color: #00aaff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #0088ff;
+}
+
+.app-card p {
+    color: #dcdcdc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 1024px) {
+    .apps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .apps-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+
+.subscribe-block {
+    text-align: center;
+    padding: 60px 40px;
+    margin-top: 60px;
+    background: #0f0f0f;
+    border-radius: 12px;
+    box-shadow: 0 0 35px #0099ff40;
+}
+
+.subscribe-block h2 {
+    font-size: 2.4rem;
+    color: #00c8ff;
+    text-shadow: 0 0 18px #00aaff;
+    margin-bottom: 20px;
+}
+
+.subscribe-block .sub-text {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    color: #d8d8d8;
+    margin-bottom: 35px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.subscribe-form input {
+    width: 330px;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #1a1a1a;
+    color: #fff;
+    box-shadow: 0 0 15px #00aaff60;
+    transition: 0.3s ease;
+}
+
+.subscribe-form input:focus {
+    box-shadow: 0 0 25px #00ccff;
+}
+
+.subscribe-form button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00aaff, #00eaff);
+    color: #000;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ffffff;
+    box-shadow: 0 0 20px #00ccff80;
+    transition: 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px #00eaff;
+}
+
+.subscribe-message {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00ccff;
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .subscribe-block h2 {
+        font-size: 1.8rem;
+    }
+    .subscribe-form input {
+        width: 90%;
+    }
+}
